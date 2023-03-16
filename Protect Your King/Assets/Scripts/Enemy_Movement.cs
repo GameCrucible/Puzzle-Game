@@ -28,6 +28,18 @@ public class Enemy_Movement : MonoBehaviour
          }
     }
 
+    void OnCollisionEnter(Collision coll)
+    {
+        print("hit");
+        GameObject collided = coll.gameObject;
+        if (collided.CompareTag("Defense"))
+        {
+            isStunned = true;
+            Invoke("unStun", 1);
+            Destroy(collided.gameObject);
+        }
+    }
+
     public void injured(int damage)
     {
         health -= damage;
@@ -35,5 +47,17 @@ public class Enemy_Movement : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
+    }
+
+    public void stun(int stunTime)
+    {
+        print("stunned");
+        isStunned = true;
+        Invoke("unStun",stunTime);
+    }
+
+    void unStun()
+    {
+        isStunned = false;
     }
 }

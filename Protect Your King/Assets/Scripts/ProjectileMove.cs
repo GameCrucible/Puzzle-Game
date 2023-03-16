@@ -29,7 +29,6 @@ public class ProjectileMove : MonoBehaviour
 
     void OnCollisionEnter(Collision coll)
     {
-        print("collision");
         GameObject collided = coll.gameObject;
         if (collided.CompareTag("Enemy"))
         {
