@@ -7,6 +7,8 @@ public class ProjectileMove : MonoBehaviour
     public static float offScreen = 5f;
     public float speed;
     public Vector3 target;
+    public int dirZ; //Directions the cannon ball will go for travel purposes [Screw you Emily] (Please remove insult later)
+    public int dmg; //Represents damage of projectile
 
     void FixedUpdate()
     {
@@ -15,7 +17,7 @@ public class ProjectileMove : MonoBehaviour
             Destroy(this.gameObject);
         }
 
-        target.Set(transform.position.x, transform.position.y, 10);
+        target.Set(transform.position.x, transform.position.y, dirZ);
         //Find position
         Vector3 direction = target - transform.position;
         direction = direction.normalized * Time.deltaTime * speed;
@@ -31,7 +33,8 @@ public class ProjectileMove : MonoBehaviour
         GameObject collided = coll.gameObject;
         if (collided.CompareTag("Enemy"))
         {
-            Destroy(collided);
+            Enemy_Movement enScript = collided.GetComponent<Enemy_Movement>();
+            enScript.injured(dmg);
             Destroy(this.gameObject);
         }
     }
