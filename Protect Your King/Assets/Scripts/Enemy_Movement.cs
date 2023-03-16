@@ -19,10 +19,4 @@ public class Enemy_Movement : MonoBehaviour
         //Movement
         transform.position = (transform.position + Vector3.ClampMagnitude(direction, distanceMax) * TimeScript.GetInstance().timeScale);
     }
-
-
-    void OnCollisionEnter(Collision collision)
-    {
-        Debug.Log("Collision Detected");
-    }
 }

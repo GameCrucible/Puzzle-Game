@@ -1,0 +1,39 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class ProjectileMove : MonoBehaviour
+{
+    public static float offScreen = 5f;
+    public float speed;
+    public Vector3 target;
+
+    void FixedUpdate()
+    {
+        if (transform.position.z > offScreen)
+        {
+            Destroy(this.gameObject);
+        }
+
+        target.Set(transform.position.x, transform.position.y, 10);
+        //Find position
+        Vector3 direction = target - transform.position;
+        direction = direction.normalized * Time.deltaTime * speed;
+        float distanceMax = Vector3.Distance(transform.position, target);
+
+        //Movement
+        transform.position = (transform.position + Vector3.ClampMagnitude(direction, distanceMax) * TimeScript.GetInstance().timeScale);
+    }
+
+    void OnCollisionEnter(Collision coll)
+    {
+        print("collision");
+        GameObject collided = coll.gameObject;
+        if (collided.CompareTag("Enemy"))
+        {
+            Destroy(collided);
+            Destroy(this.gameObject);
+        }
+    }
+
+}
