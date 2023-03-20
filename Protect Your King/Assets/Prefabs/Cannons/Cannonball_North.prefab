@@ -110,10 +110,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  target: {x: 0, y: 0, z: 0}
-  dirZ: 10
-  dirX: 0
+  dir: 10
   dmg: 1
+  directionSwitch: 1
 --- !u!54 &683896313390347333
 Rigidbody:
   m_ObjectHideFlags: 0

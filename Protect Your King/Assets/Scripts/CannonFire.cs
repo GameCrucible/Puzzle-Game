@@ -4,20 +4,27 @@ using UnityEngine;
 
 public class CannonFire : MonoBehaviour
 {
+    //This code controls the cannon firing
 
-    public GameObject Projectile;
-    public Vector3 raycastCollision = Vector3.zero;
-    public bool isProjectile;
-    private Vector3 animateScale = new Vector3(0f, 0f, 0.5f);
-    private Vector3 spawnSpot = new Vector3(0, 0, 50);
-    public Vector3 lastMousePosition;
+    public GameObject Projectile; //Instatiates the Projectile
+    public Vector3 raycastCollision = Vector3.zero; //Creates a raycast so the cannon can find enemies
+    public bool isProjectile; //Keeps cannon from firing constantly
+
+    //Use 0.75 for offset
+    public float xProjectileOffset; //Controls projectile's offset in the x direction
+    public float zProjectileOffset; //Controls projectile's offsetr in the z direction
+
+    private Vector3 animateScale = new Vector3(0f, 0f, 0.5f); //Quick animation reference
+    private Vector3 lastMousePosition; //Helps detect if the mouse is moving so cannon doesn't fire outside of time
+
     void Start()
     {
-        isProjectile = false;
-        lastMousePosition = Input.mousePosition;
+        isProjectile = false; //Sets cannon to be ready to fire
+        lastMousePosition = Input.mousePosition; //Sets mouse position
     }
     void FixedUpdate()
     {
+        //Sets up Raycast so its always on top of the cannon
         Vector3 detect = transform.TransformDirection(Vector3.forward);
         if (Input.mousePosition != lastMousePosition)
         {
@@ -26,10 +33,9 @@ public class CannonFire : MonoBehaviour
             {
                 if (isProjectile == false)
                 {
-                    print("fire");
-                    isProjectile = true;
-                    this.transform.localScale -= animateScale;
-                    Invoke("fireCannon", 2);
+                    isProjectile = true; //Prevents multiple shots from happening at once
+                    this.transform.localScale -= animateScale; //Starts cannon animation
+                    Invoke("fireCannon", 2); //Calls for shot function
                 }
             }
         }
@@ -40,14 +46,16 @@ public class CannonFire : MonoBehaviour
 
     void fireCannon()
     {
-        GameObject projectile = Instantiate<GameObject>(Projectile,spawnSpot, Quaternion.identity);
-        projectile.transform.position = transform.position;
-        this.transform.localScale += animateScale;
-        Invoke("delayFire", 3);
+        //Code to fire cannon
+        GameObject projectile = Instantiate<GameObject>(Projectile); //Spawns cannonball
+        projectile.transform.position = new Vector3((transform.position.x + xProjectileOffset),transform.position.y,(transform.position.z + zProjectileOffset));
+        this.transform.localScale += animateScale; //Finishes cannon animation
+        Invoke("delayFire", 3); //Calls the delay
     }
 
     void delayFire()
     {
+        //Delays cannon fire, not a perfect solution but it works
         isProjectile = false;
     }
 }

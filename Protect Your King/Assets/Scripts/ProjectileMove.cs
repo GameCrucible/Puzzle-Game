@@ -4,20 +4,30 @@ using UnityEngine;
 
 public class ProjectileMove : MonoBehaviour
 {
-    public static float offScreen = 5f;
-    public float speed;
-    public Vector3 target;
-    public int dirZ; //Directions the cannon ball will go for travel purposes [Screw you Emily] (Please remove insult later)
+    public static float offScreen = 5f; // Where offscreen is
+    public float speed; //How fast the projectile moves
+    private Vector3 target; //Where the projectile is going
+    public int dir; //Directions for projectile's trajectory
     public int dmg; //Represents damage of projectile
+    public bool directionSwitch; //On for North/South, Off for East/West
 
     void FixedUpdate()
     {
-        if (transform.position.z > offScreen)
+        if (transform.position.z > offScreen || transform.position.z < -offScreen || transform.position.x > offScreen || transform.position.x > -offScreen)
         {
-            Destroy(this.gameObject);
+            Destroy(this.gameObject); //If the projectile is offscreen its deleted
         }
 
-        target.Set(transform.position.x, transform.position.y, dirZ);
+        //Same movement as Enemies, effected by the TimeScript as well
+        if (directionSwitch)
+        {
+            target.Set(transform.position.x, transform.position.y, dir);
+        }
+        else
+        {
+            target.Set(dir, transform.position.y, transform.position.z);
+        }
+        
         //Find position
         Vector3 direction = target - transform.position;
         direction = direction.normalized * Time.deltaTime * speed;
@@ -29,9 +39,10 @@ public class ProjectileMove : MonoBehaviour
 
     void OnCollisionEnter(Collision coll)
     {
-        GameObject collided = coll.gameObject;
-        if (collided.CompareTag("Enemy"))
+        GameObject collided = coll.gameObject; //Finds object collided with
+        if (collided.CompareTag("Enemy")) //Checks if its an enemy
         {
+            //If its an enemy it deals damage and the projectile is deleted
             Enemy_Movement enScript = collided.GetComponent<Enemy_Movement>();
             enScript.injured(dmg);
             Destroy(this.gameObject);

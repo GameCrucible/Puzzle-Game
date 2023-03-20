@@ -4,20 +4,23 @@ using UnityEngine;
 
 public class DragScript : MonoBehaviour
 {
-    Vector3 mousePosition;
+    Vector3 mousePosition; //Keeps track of mousePosition
 
     private Vector3 findMouse()
     {
+        //When called returns position of the camera in relation to the WorldPoint
         return Camera.main.ScreenToWorldPoint(Input.mousePosition);
     }
     
     private void OnMouseDown()
     {
-    mousePosition = gameObject.transform.position - findMouse();
+        //When mouse is clicked it drags the item with this scripts
+        mousePosition = gameObject.transform.position - findMouse();
     }
 
     private void OnMouseDrag()
     {
+        //Makes object follow the mouse
         transform.position = findMouse() + mousePosition;
     }
 }

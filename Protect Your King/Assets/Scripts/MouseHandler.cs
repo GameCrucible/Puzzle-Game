@@ -15,7 +15,6 @@ public class MouseHandler : MonoBehaviour
         ts = TimeScript.GetInstance();
     }
 
-    // Update is called once per frame
     void Update()
     {
         //Checks if mouse has moved
@@ -23,25 +22,25 @@ public class MouseHandler : MonoBehaviour
         float mouseY = Input.GetAxis("Mouse Y");
 
         if(mouseX != 0 || mouseY != 0)
-        {
+        { //Checks if mouse is moving and sets Time scale as such
             scale = 0.5f;
             speed = 10;
         }
         else
         {
             if (Input.anyKey)
-            {
+            { //If there's any button input it sets Time Scale (faster)
                 scale = 1;
                 speed = 10;
             }
             else
-            {
+            { //Otherwise it doesn't move
                 scale = 0;
                 speed = 4;
             }
         }
 
-        ts.timeScale = Mathf.Lerp(ts.timeScale, scale, Time.deltaTime * speed);
+        ts.timeScale = Mathf.Lerp(ts.timeScale, scale, Time.deltaTime * speed); //Applies Time scale to the TimeScript
     }
 
 
