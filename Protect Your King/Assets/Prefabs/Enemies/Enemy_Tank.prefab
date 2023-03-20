@@ -62,7 +62,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: bf19b2a3b483e164eb1912f556ceb0a3, type: 2}
+  - {fileID: 2100000, guid: 4c455dad5c67ef24db3c4a2226f080ce, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -100,6 +100,7 @@ MonoBehaviour:
   speed: 1
   isStunned: 0
   health: 2
+  manager: {fileID: 0}
 --- !u!135 &8604729085257661982
 SphereCollider:
   m_ObjectHideFlags: 0

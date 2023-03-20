@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ProjectileMove : MonoBehaviour
 {
-    public static float offScreen = 5f; // Where offscreen is
+    public static float offScreen = 10f; // Where offscreen is
     public float speed; //How fast the projectile moves
     private Vector3 target; //Where the projectile is going
     public int dir; //Directions for projectile's trajectory

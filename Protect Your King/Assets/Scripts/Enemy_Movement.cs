@@ -9,6 +9,7 @@ public class Enemy_Movement : MonoBehaviour
     public float speed; //Sets how fast the Enemy is moving
     public bool isStunned = false; //Checks for if the enemy is currently stunned
     public int health; //Gives the Enemy a health bar
+    public GameObject manager;
 
     // Update is called once per frame
     void Update()
@@ -43,8 +44,10 @@ public class Enemy_Movement : MonoBehaviour
     public void injured(int damage)
     {
         health -= damage; //Takes damage based on what projectile hit it
-        if(health <= 0) //Only is destroyed when hit points reach 0
+        if(health < 1) //Only is destroyed when hit points reach 0
         {
+            GameManager manage = manager.GetComponent<GameManager>();
+            manage.enemyDefeated();
             Destroy(this.gameObject);
         }
     }
