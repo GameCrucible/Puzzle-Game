@@ -13,7 +13,7 @@ public class ProjectileMove : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (transform.position.z > offScreen || transform.position.z < -offScreen || transform.position.x > offScreen || transform.position.x > -offScreen)
+        if (transform.position.z > offScreen || transform.position.z < -offScreen || transform.position.x > offScreen || transform.position.x < -offScreen)
         {
             Destroy(this.gameObject); //If the projectile is offscreen its deleted
         }

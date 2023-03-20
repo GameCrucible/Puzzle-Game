@@ -127,5 +127,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   dir: -10
-  dmg: 0
+  dmg: 1
   directionSwitch: 0
