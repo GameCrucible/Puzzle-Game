@@ -6,30 +6,40 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public int enemyCount; //enemies in level
-    public int levelCount; //next level #
-    public GameObject UI; //Assigns canvas UI
+    public GameObject winUI; //Assigns canvas UI for victory screen
+    public GameObject loseUI; //Assigns canvas UI for lose screen
 
     public void Start()
     {
-        UI.SetActive(false);
+        winUI.SetActive(false);
+        loseUI.SetActive(false);
     }
     public void enemyDefeated()
-    {
-        print("a");
+    { //Opens victory when all enemies are defeated
         enemyCount--;
         if(enemyCount <= 0)
         {
-            print("Game Over, Victory");
-            UI.SetActive(true);
+            winUI.SetActive(true);
         }
     }
-    public void nextLevel()
+
+    public void lose()
     {
-        SceneManager.LoadScene("Level_" + levelCount);
+        loseUI.SetActive(true);
     }
 
-    public void returnMenu()
+    public void nextLevel() //swaps level
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
+    public void returnMenu() //returns to menu
     {
         SceneManager.LoadScene("Menu");
+    }
+
+    public void restart() //resets level
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }

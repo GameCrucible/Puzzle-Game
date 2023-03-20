@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8604729085257661980}
   - component: {fileID: 8604729085257661981}
   - component: {fileID: 8604729085257661978}
+  - component: {fileID: 8613376844202920787}
   - component: {fileID: 8604729085257661982}
   - component: {fileID: 8604729085257661977}
   m_Layer: 0
@@ -30,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 8604729085257661983}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -10, y: 1.25, z: 0}
-  m_LocalScale: {x: 1.25, y: 1.25, z: 1.25}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -99,8 +100,23 @@ MonoBehaviour:
   target: {x: 0, y: 1, z: 0}
   speed: 1
   isStunned: 0
-  health: 2
+  health: 3
   manager: {fileID: 0}
+--- !u!114 &8613376844202920787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8604729085257661983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c40e7f4ba7ee96749bc546285c074b4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  manager: {fileID: 0}
+  dirSwitch: 0
+  negSwitch: 1
 --- !u!135 &8604729085257661982
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -128,5 +144,5 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 10
   m_CollisionDetection: 0
