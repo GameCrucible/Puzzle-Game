@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 3713860368030990737}
   - component: {fileID: 3713860368030990741}
   - component: {fileID: 3713860368030990742}
+  - component: {fileID: 8722937711307973290}
   m_Layer: 0
   m_Name: StunTrap
   m_TagString: Untagged
@@ -126,3 +127,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stunTime: 5
+--- !u!114 &8722937711307973290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3713860368030990736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 392fb457d678b2e4e8817f053e20dea8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

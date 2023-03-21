@@ -28,7 +28,7 @@ public class LoseCondition : MonoBehaviour
                     manage.lose();
                 }
             }
-            
+
         }
         else {
             if (negSwitch)
@@ -48,6 +48,12 @@ public class LoseCondition : MonoBehaviour
                 }
             }
         }
-        
+
     }
+
+    public void directionSwitch()
+    {
+        negSwitch = !negSwitch;
+    }
+    
 }

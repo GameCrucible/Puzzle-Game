@@ -9,7 +9,7 @@ public class Enemy_Movement : MonoBehaviour
     public float speed; //Sets how fast the Enemy is moving
     public bool isStunned = false; //Checks for if the enemy is currently stunned
     public int health; //Gives the Enemy a health bar
-    public GameObject manager;
+    public GameObject manager; //Assign the scene's Game Manager
 
     // Update is called once per frame
     void Update()
@@ -35,8 +35,7 @@ public class Enemy_Movement : MonoBehaviour
         GameObject collided = coll.gameObject; //Finds object collided with
         if (collided.CompareTag("Defense")) //Makes sure object is a defense
         {
-            isStunned = true; //stuns enemy
-            Invoke("unStun", 1); //1 second delay
+            stun();
             Destroy(collided.gameObject); //Destroys defense
         }
     }
@@ -52,14 +51,13 @@ public class Enemy_Movement : MonoBehaviour
         }
     }
 
-    public void stun(int stunTime)
-    {
-        isStunned = true; //Stuns the target for x amount of time, called by StunTrap
-        Invoke("unStun",stunTime);
-    }
-
     void unStun()
     {
         isStunned = false; //Unstuns after delay determined by Invoke
+    }
+    public void stun()
+    {
+        isStunned = true;
+        Invoke("unStun", 1);
     }
 }

@@ -258,6 +258,7 @@ MonoBehaviour:
   Projectile: {fileID: 1537220081111023386, guid: 387c926286fd7724ca0feef51ac4c5cc, type: 3}
   raycastCollision: {x: 0, y: 0, z: 0}
   isProjectile: 0
+  fireTime: 2
   xProjectileOffset: 0
   zProjectileOffset: 0.75
 --- !u!114 &1533300928

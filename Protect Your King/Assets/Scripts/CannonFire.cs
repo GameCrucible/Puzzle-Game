@@ -9,6 +9,7 @@ public class CannonFire : MonoBehaviour
     public GameObject Projectile; //Instatiates the Projectile
     public Vector3 raycastCollision = Vector3.zero; //Creates a raycast so the cannon can find enemies
     public bool isProjectile; //Keeps cannon from firing constantly
+    public int fireTime; //determines firing time
 
     //Use 0.75 for offset
     public float xProjectileOffset; //Controls projectile's offset in the x direction
@@ -35,7 +36,7 @@ public class CannonFire : MonoBehaviour
                 {
                     isProjectile = true; //Prevents multiple shots from happening at once
                     this.transform.localScale -= animateScale; //Starts cannon animation
-                    Invoke("fireCannon", 2); //Calls for shot function
+                    Invoke("fireCannon", fireTime); //Calls for shot function
                 }
             }
         }
