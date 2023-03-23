@@ -20,6 +20,7 @@ public class StunManager : MonoBehaviour
         LoseCondition lScript = this.GetComponent<LoseCondition>();
         lScript.directionSwitch();
         transform.position = new Vector3(destination.transform.position.x, this.transform.position.y, destination.transform.position.z);
+        print(destination.transform.position.x + " " + destination.transform.position.z);
     }
 
 

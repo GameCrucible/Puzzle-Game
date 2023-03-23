@@ -15,7 +15,6 @@ public class StunTrap : MonoBehaviour
             StunManager enScript = collided.GetComponent<StunManager>();
             enScript.stun(stunTime);
             Destroy(this.gameObject);
-            Destroy(connectedPortal);
         }
     }
 
