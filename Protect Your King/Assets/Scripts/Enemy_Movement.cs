@@ -14,7 +14,7 @@ public class Enemy_Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (isStunned == true)
+        if (isStunned|| TimeStopo.isTimeStopped)
         {
             //If stunned they can't act
         }
@@ -25,7 +25,7 @@ public class Enemy_Movement : MonoBehaviour
         float distanceMax = Vector3.Distance(transform.position, target);
 
         //Movement, affected by TimeScript
-        transform.position = (transform.position + Vector3.ClampMagnitude(direction, distanceMax) * TimeScript.GetInstance().timeScale);
+        transform.position = (transform.position + Vector3.ClampMagnitude(direction, distanceMax));
          }
     }
 

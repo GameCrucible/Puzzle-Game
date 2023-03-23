@@ -27,9 +27,12 @@ public class CannonFire : MonoBehaviour
     {
         //Sets up Raycast so its always on top of the cannon
         Vector3 detect = transform.TransformDirection(Vector3.forward);
-        if (Input.mousePosition != lastMousePosition)
+        if(TimeStopo.isTimeStopped) //If time is stopped nothing happens
         {
-            lastMousePosition = Input.mousePosition;
+           
+        }
+        else
+        {
             if (Physics.Raycast(transform.position, detect, 100))
             {
                 if (isProjectile == false)
@@ -40,7 +43,7 @@ public class CannonFire : MonoBehaviour
                 }
             }
         }
-        
+            
         
 
     }

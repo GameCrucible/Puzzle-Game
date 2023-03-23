@@ -5,7 +5,7 @@ using UnityEngine;
 public class DragScript : MonoBehaviour
 {
     Vector3 mousePosition; //Keeps track of mousePosition
-
+    
     private Vector3 findMouse()
     {
         //When called returns position of the camera in relation to the WorldPoint

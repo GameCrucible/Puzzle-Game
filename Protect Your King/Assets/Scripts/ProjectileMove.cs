@@ -27,14 +27,19 @@ public class ProjectileMove : MonoBehaviour
         {
             target.Set(dir, transform.position.y, transform.position.z);
         }
-        
-        //Find position
-        Vector3 direction = target - transform.position;
-        direction = direction.normalized * Time.deltaTime * speed;
-        float distanceMax = Vector3.Distance(transform.position, target);
 
-        //Movement
-        transform.position = (transform.position + Vector3.ClampMagnitude(direction, distanceMax) * TimeScript.GetInstance().timeScale);
+        if (TimeStopo.isTimeStopped) { }
+        else
+        {
+            //Find position
+            Vector3 direction = target - transform.position;
+            direction = direction.normalized * Time.deltaTime * speed;
+            float distanceMax = Vector3.Distance(transform.position, target);
+
+            //Movement
+            transform.position = (transform.position + Vector3.ClampMagnitude(direction, distanceMax));
+        }
+        
     }
 
     void OnCollisionEnter(Collision coll)
@@ -47,6 +52,11 @@ public class ProjectileMove : MonoBehaviour
             enScript.injured(dmg);
             Destroy(this.gameObject);
         }
+        else if(collided.CompareTag("Castle")) {
+            print("a");
+            Destroy(this.gameObject);
+        }
     }
+
 
 }
