@@ -294,6 +294,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c1568f3ef4d64ce44b2e57ca0c1b5a77, type: 3}
+--- !u!1 &315951424 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7133762845518655237, guid: 38c732fb848e20f429089628264b651b, type: 3}
+  m_PrefabInstance: {fileID: 1258631215}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &320707502
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -366,7 +371,7 @@ PrefabInstance:
     - target: {fileID: 1809011431541362417, guid: 6093d881140dd694883435ed33c4b703, type: 3}
       propertyPath: destination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 315951424}
     - target: {fileID: 5010366425369434412, guid: 6093d881140dd694883435ed33c4b703, type: 3}
       propertyPath: m_Name
       value: Enemy_Default
@@ -523,7 +528,7 @@ PrefabInstance:
     - target: {fileID: 1809011431541362417, guid: 6093d881140dd694883435ed33c4b703, type: 3}
       propertyPath: destination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 315951424}
     - target: {fileID: 5010366425369434412, guid: 6093d881140dd694883435ed33c4b703, type: 3}
       propertyPath: m_Name
       value: Enemy_Default (1)
@@ -719,7 +724,7 @@ PrefabInstance:
     - target: {fileID: 3713860368030990742, guid: 014fc8499e87f3f488d1932c65eb8d72, type: 3}
       propertyPath: connectedPortal
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 315951424}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 014fc8499e87f3f488d1932c65eb8d72, type: 3}
 --- !u!1 &1232645220
@@ -882,7 +887,7 @@ PrefabInstance:
     - target: {fileID: -6750495537772369219, guid: 79fbd939fcbe2b14fb4bc65b4bad443f, type: 3}
       propertyPath: destination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 315951424}
     - target: {fileID: 5010366425369434412, guid: 79fbd939fcbe2b14fb4bc65b4bad443f, type: 3}
       propertyPath: m_Name
       value: Enemy_Big
