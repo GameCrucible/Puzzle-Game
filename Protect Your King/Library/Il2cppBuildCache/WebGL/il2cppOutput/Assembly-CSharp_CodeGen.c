@@ -68,55 +68,61 @@ extern void MouseHandler_Start_m91A2AC082AFC2C10141D2DF9D516500010CECE40 (void);
 extern void MouseHandler_Update_mF62CE728347ED52B4CF69695E91F44854531D739 (void);
 // 0x0000001C System.Void MouseHandler::.ctor()
 extern void MouseHandler__ctor_mC33E825A0E7632D6D28943636B566B6E341CCC0A (void);
-// 0x0000001D System.Void ProjectileMove::FixedUpdate()
-extern void ProjectileMove_FixedUpdate_m3E9005CDE7A8D5AE6BF2FA919087074412D1ED21 (void);
-// 0x0000001E System.Void ProjectileMove::OnCollisionEnter(UnityEngine.Collision)
-extern void ProjectileMove_OnCollisionEnter_mE15FD949E552F8A0B6F9561220315A5379C54FA8 (void);
-// 0x0000001F System.Void ProjectileMove::.ctor()
-extern void ProjectileMove__ctor_m45AFA0AED1F6989432520879A1B169EDC211209E (void);
-// 0x00000020 System.Void ProjectileMove::.cctor()
-extern void ProjectileMove__cctor_m2FDB614548BC83CC600244563E87BA0D17AADFA3 (void);
-// 0x00000021 System.Void ProjectileShot_EastWest::FixedUpdate()
-extern void ProjectileShot_EastWest_FixedUpdate_m15EEED83AE120FE15D3A64985287615557A230D1 (void);
-// 0x00000022 System.Void ProjectileShot_EastWest::OnCollisionEnter(UnityEngine.Collision)
-extern void ProjectileShot_EastWest_OnCollisionEnter_m5697AD1863C8E89E9501E83C53450A1D82A6DA0F (void);
-// 0x00000023 System.Void ProjectileShot_EastWest::.ctor()
-extern void ProjectileShot_EastWest__ctor_mA1BA8178E9B3ACEC713DDA9D73A98815EE44EE46 (void);
-// 0x00000024 System.Void ProjectileShot_EastWest::.cctor()
-extern void ProjectileShot_EastWest__cctor_m1ECAB917C83048834C6758455FF0050F3C925DE3 (void);
-// 0x00000025 System.Void StunManager::Start()
-extern void StunManager_Start_mB9A23B6E1C040508BE52838CBF806B0BF8318B97 (void);
-// 0x00000026 System.Void StunManager::stun(System.Int32)
-extern void StunManager_stun_m913DE4447793F2673DB37B04BF206B00AEE9CE3D (void);
-// 0x00000027 System.Void StunManager::.ctor()
-extern void StunManager__ctor_mB0F9A30153DAA7ED42148F0D243FFD0EC89C8FAE (void);
-// 0x00000028 System.Void StunTrap::OnCollisionEnter(UnityEngine.Collision)
-extern void StunTrap_OnCollisionEnter_mB846AF7CD5FF76E6BD5D3507F426F34F544AAED5 (void);
-// 0x00000029 System.Void StunTrap::.ctor()
-extern void StunTrap__ctor_m1B21F388E0BA6D4DA42544A487B85D04ECA12333 (void);
-// 0x0000002A TimeScript TimeScript::GetInstance()
+// 0x0000001D TimeScript TimeScript::GetInstance()
 extern void TimeScript_GetInstance_mAA6C430CE6575D1D2AF6EB691C572CCA1B59724B (void);
-// 0x0000002B System.Void TimeScript::Awake()
+// 0x0000001E System.Void TimeScript::Awake()
 extern void TimeScript_Awake_m554F4D3409CFBB85E72F28281427A5ED67449057 (void);
-// 0x0000002C System.Void TimeScript::FixedUpdate()
+// 0x0000001F System.Void TimeScript::FixedUpdate()
 extern void TimeScript_FixedUpdate_m3679D36951E3DD2A537AAFDD8ED94879AC3C2DB4 (void);
-// 0x0000002D System.Void TimeScript::Update()
+// 0x00000020 System.Void TimeScript::Update()
 extern void TimeScript_Update_m0F1C0F69A4315029F6FD9CDA7E104AD88D2FAF90 (void);
-// 0x0000002E System.Void TimeScript::.ctor()
+// 0x00000021 System.Void TimeScript::.ctor()
 extern void TimeScript__ctor_mEECE46AE4380BD458995AAF8DB8C06F0B2C49E25 (void);
-// 0x0000002F System.Void HowToPlayButton::OpenScene()
+// 0x00000022 System.Void ProjectileMove::FixedUpdate()
+extern void ProjectileMove_FixedUpdate_m3E9005CDE7A8D5AE6BF2FA919087074412D1ED21 (void);
+// 0x00000023 System.Void ProjectileMove::OnCollisionEnter(UnityEngine.Collision)
+extern void ProjectileMove_OnCollisionEnter_mE15FD949E552F8A0B6F9561220315A5379C54FA8 (void);
+// 0x00000024 System.Void ProjectileMove::.ctor()
+extern void ProjectileMove__ctor_m45AFA0AED1F6989432520879A1B169EDC211209E (void);
+// 0x00000025 System.Void ProjectileMove::.cctor()
+extern void ProjectileMove__cctor_m2FDB614548BC83CC600244563E87BA0D17AADFA3 (void);
+// 0x00000026 System.Void ProjectileShot_EastWest::FixedUpdate()
+extern void ProjectileShot_EastWest_FixedUpdate_m15EEED83AE120FE15D3A64985287615557A230D1 (void);
+// 0x00000027 System.Void ProjectileShot_EastWest::OnCollisionEnter(UnityEngine.Collision)
+extern void ProjectileShot_EastWest_OnCollisionEnter_m5697AD1863C8E89E9501E83C53450A1D82A6DA0F (void);
+// 0x00000028 System.Void ProjectileShot_EastWest::.ctor()
+extern void ProjectileShot_EastWest__ctor_mA1BA8178E9B3ACEC713DDA9D73A98815EE44EE46 (void);
+// 0x00000029 System.Void ProjectileShot_EastWest::.cctor()
+extern void ProjectileShot_EastWest__cctor_m1ECAB917C83048834C6758455FF0050F3C925DE3 (void);
+// 0x0000002A System.Void StunManager::Start()
+extern void StunManager_Start_mB9A23B6E1C040508BE52838CBF806B0BF8318B97 (void);
+// 0x0000002B System.Void StunManager::stun(System.Int32)
+extern void StunManager_stun_m913DE4447793F2673DB37B04BF206B00AEE9CE3D (void);
+// 0x0000002C System.Void StunManager::.ctor()
+extern void StunManager__ctor_mB0F9A30153DAA7ED42148F0D243FFD0EC89C8FAE (void);
+// 0x0000002D System.Void StunTrap::OnCollisionEnter(UnityEngine.Collision)
+extern void StunTrap_OnCollisionEnter_mB846AF7CD5FF76E6BD5D3507F426F34F544AAED5 (void);
+// 0x0000002E System.Void StunTrap::.ctor()
+extern void StunTrap__ctor_m1B21F388E0BA6D4DA42544A487B85D04ECA12333 (void);
+// 0x0000002F System.Void TimeStopo::Update()
+extern void TimeStopo_Update_m8118E60FDEC82B7C2C117F60D0374BE2BB2BBB72 (void);
+// 0x00000030 System.Void TimeStopo::.ctor()
+extern void TimeStopo__ctor_m22B3DB6736B5C83580767E5818BBBC069613CB19 (void);
+// 0x00000031 System.Void TimeStopo::.cctor()
+extern void TimeStopo__cctor_mF1E8C1EF0D3686335D885F815AB5433B8703EC4D (void);
+// 0x00000032 System.Void HowToPlayButton::OpenScene()
 extern void HowToPlayButton_OpenScene_m0CB1CA524B0E56F495DE1DF62A5C2DDDA46A9EF1 (void);
-// 0x00000030 System.Void HowToPlayButton::.ctor()
+// 0x00000033 System.Void HowToPlayButton::.ctor()
 extern void HowToPlayButton__ctor_mC46AE2CEFE7B5541BD68BE5F9387519D90227C3B (void);
-// 0x00000031 System.Void LevelButton::OpenScene()
+// 0x00000034 System.Void LevelButton::OpenScene()
 extern void LevelButton_OpenScene_m973CFEDDDB295B9E09B073B46E59CE125AA602E9 (void);
-// 0x00000032 System.Void LevelButton::howTo()
+// 0x00000035 System.Void LevelButton::howTo()
 extern void LevelButton_howTo_mFACE9163EEBCE9BFF1169CF066297D267F1882DF (void);
-// 0x00000033 System.Void LevelButton::Exit()
+// 0x00000036 System.Void LevelButton::Exit()
 extern void LevelButton_Exit_m1ADD6914F809772E38E3B3F55697D2C8D5CF52F4 (void);
-// 0x00000034 System.Void LevelButton::.ctor()
+// 0x00000037 System.Void LevelButton::.ctor()
 extern void LevelButton__ctor_m7D35B7AC519AF91B2CEF54089E96E2195AC4E99F (void);
-static Il2CppMethodPointer s_methodPointers[52] = 
+static Il2CppMethodPointer s_methodPointers[55] = 
 {
 	CannonFire_Start_m72236D3C4557C2A7502E8C94F75B7B48F4874CE0,
 	CannonFire_FixedUpdate_m536CF03B09B43D048477C1C5163BB0FC2735CC2D,
@@ -146,6 +152,11 @@ static Il2CppMethodPointer s_methodPointers[52] =
 	MouseHandler_Start_m91A2AC082AFC2C10141D2DF9D516500010CECE40,
 	MouseHandler_Update_mF62CE728347ED52B4CF69695E91F44854531D739,
 	MouseHandler__ctor_mC33E825A0E7632D6D28943636B566B6E341CCC0A,
+	TimeScript_GetInstance_mAA6C430CE6575D1D2AF6EB691C572CCA1B59724B,
+	TimeScript_Awake_m554F4D3409CFBB85E72F28281427A5ED67449057,
+	TimeScript_FixedUpdate_m3679D36951E3DD2A537AAFDD8ED94879AC3C2DB4,
+	TimeScript_Update_m0F1C0F69A4315029F6FD9CDA7E104AD88D2FAF90,
+	TimeScript__ctor_mEECE46AE4380BD458995AAF8DB8C06F0B2C49E25,
 	ProjectileMove_FixedUpdate_m3E9005CDE7A8D5AE6BF2FA919087074412D1ED21,
 	ProjectileMove_OnCollisionEnter_mE15FD949E552F8A0B6F9561220315A5379C54FA8,
 	ProjectileMove__ctor_m45AFA0AED1F6989432520879A1B169EDC211209E,
@@ -159,11 +170,9 @@ static Il2CppMethodPointer s_methodPointers[52] =
 	StunManager__ctor_mB0F9A30153DAA7ED42148F0D243FFD0EC89C8FAE,
 	StunTrap_OnCollisionEnter_mB846AF7CD5FF76E6BD5D3507F426F34F544AAED5,
 	StunTrap__ctor_m1B21F388E0BA6D4DA42544A487B85D04ECA12333,
-	TimeScript_GetInstance_mAA6C430CE6575D1D2AF6EB691C572CCA1B59724B,
-	TimeScript_Awake_m554F4D3409CFBB85E72F28281427A5ED67449057,
-	TimeScript_FixedUpdate_m3679D36951E3DD2A537AAFDD8ED94879AC3C2DB4,
-	TimeScript_Update_m0F1C0F69A4315029F6FD9CDA7E104AD88D2FAF90,
-	TimeScript__ctor_mEECE46AE4380BD458995AAF8DB8C06F0B2C49E25,
+	TimeStopo_Update_m8118E60FDEC82B7C2C117F60D0374BE2BB2BBB72,
+	TimeStopo__ctor_m22B3DB6736B5C83580767E5818BBBC069613CB19,
+	TimeStopo__cctor_mF1E8C1EF0D3686335D885F815AB5433B8703EC4D,
 	HowToPlayButton_OpenScene_m0CB1CA524B0E56F495DE1DF62A5C2DDDA46A9EF1,
 	HowToPlayButton__ctor_mC46AE2CEFE7B5541BD68BE5F9387519D90227C3B,
 	LevelButton_OpenScene_m973CFEDDDB295B9E09B073B46E59CE125AA602E9,
@@ -171,7 +180,7 @@ static Il2CppMethodPointer s_methodPointers[52] =
 	LevelButton_Exit_m1ADD6914F809772E38E3B3F55697D2C8D5CF52F4,
 	LevelButton__ctor_m7D35B7AC519AF91B2CEF54089E96E2195AC4E99F,
 };
-static const int32_t s_InvokerIndices[52] = 
+static const int32_t s_InvokerIndices[55] = 
 {
 	1098,
 	1098,
@@ -201,6 +210,11 @@ static const int32_t s_InvokerIndices[52] =
 	1098,
 	1098,
 	1098,
+	1848,
+	1098,
+	1098,
+	1098,
+	1098,
 	1098,
 	942,
 	1098,
@@ -214,11 +228,9 @@ static const int32_t s_InvokerIndices[52] =
 	1098,
 	942,
 	1098,
-	1848,
 	1098,
 	1098,
-	1098,
-	1098,
+	1862,
 	1098,
 	1098,
 	1098,
@@ -231,7 +243,7 @@ IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
 {
 	"Assembly-CSharp.dll",
-	52,
+	55,
 	s_methodPointers,
 	0,
 	NULL,
