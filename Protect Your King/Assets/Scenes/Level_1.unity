@@ -371,6 +371,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LoseConWest
       objectReference: {fileID: 0}
+    - target: {fileID: 8246133988147087193, guid: eec149c58bae9e9449cf1ccb7eb6848b, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eec149c58bae9e9449cf1ccb7eb6848b, type: 3}
 --- !u!1001 &1479750379
@@ -484,6 +488,10 @@ PrefabInstance:
     - target: {fileID: 4413750491715543572, guid: 2dbc5859240ac3d4fbb057c5ebca3895, type: 3}
       propertyPath: m_Name
       value: LoseConEast
+      objectReference: {fileID: 0}
+    - target: {fileID: 4413750491715543572, guid: 2dbc5859240ac3d4fbb057c5ebca3895, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2dbc5859240ac3d4fbb057c5ebca3895, type: 3}

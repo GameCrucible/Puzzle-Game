@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8246133988147087194}
   - component: {fileID: 8246133988147087195}
   - component: {fileID: 8246133988147087192}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: LoseConWest
   m_TagString: Finish
   m_Icon: {fileID: 0}
