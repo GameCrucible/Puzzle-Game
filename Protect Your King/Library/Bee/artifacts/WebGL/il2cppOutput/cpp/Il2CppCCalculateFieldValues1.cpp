@@ -116,6 +116,8 @@ struct RectOffset_t6358774A0DEEABA4586840CB9BC7DC88B39660B5;
 struct Rigidbody_t268697F5A994213ED97393309870968BC1C7393C;
 // System.String
 struct String_t;
+// UnityEngine.UI.Text
+struct Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62;
 // TimeScript
 struct TimeScript_tBC63911A6D55CE29536F09C42D698A50520D6ABE;
 // UnityEngine.TouchScreenKeyboard
@@ -2101,6 +2103,8 @@ struct Enemy_Movement_t109EE53359EFFC96EBEED791B4340CBC075E8B45  : public MonoBe
 	int32_t ___health_7;
 	// UnityEngine.GameObject Enemy_Movement::manager
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___manager_8;
+	// System.Boolean Enemy_Movement::isBoss
+	bool ___isBoss_9;
 };
 
 // GameManager
@@ -2112,6 +2116,10 @@ struct GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6  : public MonoBehav
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___winUI_5;
 	// UnityEngine.GameObject GameManager::loseUI
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___loseUI_6;
+	// System.Boolean GameManager::gameOver
+	bool ___gameOver_7;
+	// System.Boolean GameManager::isBossAlive
+	bool ___isBossAlive_8;
 };
 
 // LoseCondition
@@ -2187,6 +2195,13 @@ struct TimeScript_tBC63911A6D55CE29536F09C42D698A50520D6ABE  : public MonoBehavi
 	float ___timeFixed_5;
 	// System.Single TimeScript::timeScale
 	float ___timeScale_6;
+};
+
+// TimeStopCheck
+struct TimeStopCheck_tEFB986A0CC8B5427E62AEC479F7664F05073E4EF  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
+{
+	// UnityEngine.UI.Text TimeStopCheck::txt
+	Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* ___txt_4;
 };
 
 // TimeStopo
@@ -2859,6 +2874,10 @@ struct TimeScript_tBC63911A6D55CE29536F09C42D698A50520D6ABE_StaticFields
 
 // TimeScript
 
+// TimeStopCheck
+
+// TimeStopCheck
+
 // TimeStopo
 struct TimeStopo_t6972F7B929A84130AADA1E912A31B1F58D736795_StaticFields
 {
@@ -3328,12 +3347,12 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3227[8] =
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3228[1] = 
 {
 	static_cast<int32_t>(offsetof(DragScript_t457F329CB6C58BD2E9CA0ABE637BB36C41F0C9F9, ___mousePosition_4)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3229[5] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3229[6] = 
 {
-	static_cast<int32_t>(offsetof(Enemy_Movement_t109EE53359EFFC96EBEED791B4340CBC075E8B45, ___target_4)),static_cast<int32_t>(offsetof(Enemy_Movement_t109EE53359EFFC96EBEED791B4340CBC075E8B45, ___speed_5)),static_cast<int32_t>(offsetof(Enemy_Movement_t109EE53359EFFC96EBEED791B4340CBC075E8B45, ___isStunned_6)),static_cast<int32_t>(offsetof(Enemy_Movement_t109EE53359EFFC96EBEED791B4340CBC075E8B45, ___health_7)),static_cast<int32_t>(offsetof(Enemy_Movement_t109EE53359EFFC96EBEED791B4340CBC075E8B45, ___manager_8)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3230[3] = 
+	static_cast<int32_t>(offsetof(Enemy_Movement_t109EE53359EFFC96EBEED791B4340CBC075E8B45, ___target_4)),static_cast<int32_t>(offsetof(Enemy_Movement_t109EE53359EFFC96EBEED791B4340CBC075E8B45, ___speed_5)),static_cast<int32_t>(offsetof(Enemy_Movement_t109EE53359EFFC96EBEED791B4340CBC075E8B45, ___isStunned_6)),static_cast<int32_t>(offsetof(Enemy_Movement_t109EE53359EFFC96EBEED791B4340CBC075E8B45, ___health_7)),static_cast<int32_t>(offsetof(Enemy_Movement_t109EE53359EFFC96EBEED791B4340CBC075E8B45, ___manager_8)),static_cast<int32_t>(offsetof(Enemy_Movement_t109EE53359EFFC96EBEED791B4340CBC075E8B45, ___isBoss_9)),};
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3230[5] = 
 {
-	static_cast<int32_t>(offsetof(GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6, ___enemyCount_4)),static_cast<int32_t>(offsetof(GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6, ___winUI_5)),static_cast<int32_t>(offsetof(GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6, ___loseUI_6)),};
+	static_cast<int32_t>(offsetof(GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6, ___enemyCount_4)),static_cast<int32_t>(offsetof(GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6, ___winUI_5)),static_cast<int32_t>(offsetof(GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6, ___loseUI_6)),static_cast<int32_t>(offsetof(GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6, ___gameOver_7)),static_cast<int32_t>(offsetof(GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6, ___isBossAlive_8)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3231[1] = 
 {
 	static_cast<int32_t>(offsetof(LoseCondition_tE9F1710734DE12BC0FFA41D6F46B4A648614CD14, ___manager_4)),};
@@ -3358,12 +3377,15 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3237[2] =
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3238[2] = 
 {
 	static_cast<int32_t>(offsetof(TimeStopo_t6972F7B929A84130AADA1E912A31B1F58D736795, ___used_4)),static_cast<int32_t>(offsetof(TimeStopo_t6972F7B929A84130AADA1E912A31B1F58D736795_StaticFields, ___isTimeStopped_5)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3242[3] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3241[1] = 
+{
+	static_cast<int32_t>(offsetof(TimeStopCheck_tEFB986A0CC8B5427E62AEC479F7664F05073E4EF, ___txt_4)),};
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3243[3] = 
 {
 	static_cast<int32_t>(offsetof(ASN1_t33549D58797C9C33AA83F13AD184EAA00C584A6F, ___m_nTag_0)),static_cast<int32_t>(offsetof(ASN1_t33549D58797C9C33AA83F13AD184EAA00C584A6F, ___m_aValue_1)),static_cast<int32_t>(offsetof(ASN1_t33549D58797C9C33AA83F13AD184EAA00C584A6F, ___elist_2)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3247[3] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3248[3] = 
 {
 	static_cast<int32_t>(offsetof(XmlReader_t4C709DEF5F01606ECB60B638F1BD6F6E0A9116FD_StaticFields, ___IsTextualNodeBitmap_0)),static_cast<int32_t>(offsetof(XmlReader_t4C709DEF5F01606ECB60B638F1BD6F6E0A9116FD_StaticFields, ___CanReadContentAsBitmap_1)),static_cast<int32_t>(offsetof(XmlReader_t4C709DEF5F01606ECB60B638F1BD6F6E0A9116FD_StaticFields, ___HasValueBitmap_2)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3252[4] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3253[4] = 
 {
 	static_cast<int32_t>(sizeof(RuntimeObject)),0,0,0,};

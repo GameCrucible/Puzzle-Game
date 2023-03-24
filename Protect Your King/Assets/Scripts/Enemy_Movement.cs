@@ -10,6 +10,7 @@ public class Enemy_Movement : MonoBehaviour
     public bool isStunned = false; //Checks for if the enemy is currently stunned
     public int health; //Gives the Enemy a health bar
     public GameObject manager; //Assign the scene's Game Manager
+    public bool isBoss; //Checks if enemy is boss
 
     // Update is called once per frame
     void Update()
@@ -47,6 +48,11 @@ public class Enemy_Movement : MonoBehaviour
         {
             GameManager manage = manager.GetComponent<GameManager>();
             manage.enemyDefeated();
+            if (isBoss)
+            {
+                manage.bossDefeated();
+            }
+
             Destroy(this.gameObject);
         }
     }

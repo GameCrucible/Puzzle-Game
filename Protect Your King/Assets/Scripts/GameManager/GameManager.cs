@@ -8,6 +8,8 @@ public class GameManager : MonoBehaviour
     public int enemyCount; //enemies in level
     public GameObject winUI; //Assigns canvas UI for victory screen
     public GameObject loseUI; //Assigns canvas UI for lose screen
+    private bool gameOver = false; //prevents win and lose from appearing at the same time
+    public bool isBossAlive; //Final Level check
 
     public void Start()
     {
@@ -17,16 +19,40 @@ public class GameManager : MonoBehaviour
     public void enemyDefeated()
     { //Opens victory when all enemies are defeated
         enemyCount--;
-        print("enemy killed");
-        if(enemyCount < 1)
+        if(enemyCount < 1 && isBossAlive == false)
         {
-            winUI.SetActive(true);
+            if (gameOver)
+            {
+
+            }
+            else
+            {
+                gameOver = true;
+                winUI.SetActive(true);
+            }
+            
         }
     }
 
     public void lose()
     {
-        loseUI.SetActive(true);
+        if (gameOver)
+        {
+
+        }
+        else
+        {
+            gameOver = true;
+            loseUI.SetActive(true);
+        }
+        
+    }
+
+    public void bossDefeated()
+    {
+        isBossAlive = false;
+        enemyCount++;
+        enemyDefeated();
     }
 
     public void nextLevel() //swaps level

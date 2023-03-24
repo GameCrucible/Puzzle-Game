@@ -13,6 +13,7 @@ ScriptsOnlyBuild:
     - StunManager
     - StunTrap
     - TimeScript
+    - TimeStopCheck
     - TimeStopo
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
@@ -283,6 +284,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 4004}
     - Class: 114
       Script: {instanceID: 4138}
+    - Class: 114
+      Script: {instanceID: 28946}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -368,6 +371,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 4004}
     - Class: 114
       Script: {instanceID: 4138}
+    - Class: 114
+      Script: {instanceID: 28946}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -453,6 +458,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 4004}
     - Class: 114
       Script: {instanceID: 4138}
+    - Class: 114
+      Script: {instanceID: 28946}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -540,6 +547,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 4004}
     - Class: 114
       Script: {instanceID: 4138}
+    - Class: 114
+      Script: {instanceID: 28946}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -627,6 +636,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 4004}
     - Class: 114
       Script: {instanceID: 4138}
+    - Class: 114
+      Script: {instanceID: 28946}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -714,6 +725,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 4004}
     - Class: 114
       Script: {instanceID: 4138}
+    - Class: 114
+      Script: {instanceID: 28946}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1094,7 +1107,7 @@ ScriptsOnlyBuild:
     className: PhysicsRaycaster
   - hash:
       serializedVersion: 2
-      Hash: 756205cc33c6b6485b56491d4e1f3f9e
+      Hash: dee2c34fd5b163295c01bf18fdb73c93
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Enemy_Movement
@@ -1184,7 +1197,7 @@ ScriptsOnlyBuild:
     className: TMP_SubMeshUI
   - hash:
       serializedVersion: 2
-      Hash: 9c3784887055d2d701bff6783d1459cb
+      Hash: 448689ebefc996658c8e240f54a18262
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameManager
@@ -1308,6 +1321,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TextContainer
+  - hash:
+      serializedVersion: 2
+      Hash: f5d40cd05a1722eb56dd9c90598441e1
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: TimeStopCheck
   platform: 20
   scenePathNames:
   - Assets/Scenes/Menu.unity
@@ -1318,4 +1337,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/Level_5.unity
   - Assets/Scenes/Level_6.unity
   - Assets/Scenes/Level_7.unity
-  playerPath: C:/Users/exert/Desktop/PYKZips/DefendtheKingv4
+  playerPath: C:/Users/exert/Desktop/PYKZips/DefendtheKingv5

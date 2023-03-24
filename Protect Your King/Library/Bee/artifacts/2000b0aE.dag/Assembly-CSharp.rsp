@@ -323,6 +323,7 @@
 "Assets/Scripts/TimeStopo.cs"
 "Assets/Scripts/UI/HowToPlayButton.cs"
 "Assets/Scripts/UI/LevelButton.cs"
+"Assets/Scripts/UI/TimeStopCheck.cs"
 -langversion:9.0
 
 /deterministic
