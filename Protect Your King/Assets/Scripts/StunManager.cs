@@ -17,8 +17,6 @@ public class StunManager : MonoBehaviour
     {
         Enemy_Movement enScript = this.GetComponent<Enemy_Movement>();
         enScript.stun();
-        LoseCondition lScript = this.GetComponent<LoseCondition>();
-        lScript.directionSwitch();
         transform.position = new Vector3(destination.transform.position.x, this.transform.position.y, destination.transform.position.z);
     }
 

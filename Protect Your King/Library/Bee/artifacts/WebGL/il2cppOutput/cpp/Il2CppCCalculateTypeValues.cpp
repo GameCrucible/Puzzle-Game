@@ -36659,10 +36659,6 @@ struct LoseCondition_tE9F1710734DE12BC0FFA41D6F46B4A648614CD14  : public MonoBeh
 {
 	// UnityEngine.GameObject LoseCondition::manager
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___manager_4;
-	// System.Boolean LoseCondition::negSwitch
-	bool ___negSwitch_5;
-	// System.Double LoseCondition::target
-	double ___target_6;
 };
 
 // UnityEngine.UIElements.MinMaxSlider

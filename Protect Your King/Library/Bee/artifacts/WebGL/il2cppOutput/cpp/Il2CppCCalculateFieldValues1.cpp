@@ -2119,10 +2119,6 @@ struct LoseCondition_tE9F1710734DE12BC0FFA41D6F46B4A648614CD14  : public MonoBeh
 {
 	// UnityEngine.GameObject LoseCondition::manager
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___manager_4;
-	// System.Boolean LoseCondition::negSwitch
-	bool ___negSwitch_5;
-	// System.Double LoseCondition::target
-	double ___target_6;
 };
 
 // MouseHandler
@@ -3338,9 +3334,9 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3229[5] =
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3230[3] = 
 {
 	static_cast<int32_t>(offsetof(GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6, ___enemyCount_4)),static_cast<int32_t>(offsetof(GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6, ___winUI_5)),static_cast<int32_t>(offsetof(GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6, ___loseUI_6)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3231[3] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3231[1] = 
 {
-	static_cast<int32_t>(offsetof(LoseCondition_tE9F1710734DE12BC0FFA41D6F46B4A648614CD14, ___manager_4)),static_cast<int32_t>(offsetof(LoseCondition_tE9F1710734DE12BC0FFA41D6F46B4A648614CD14, ___negSwitch_5)),static_cast<int32_t>(offsetof(LoseCondition_tE9F1710734DE12BC0FFA41D6F46B4A648614CD14, ___target_6)),};
+	static_cast<int32_t>(offsetof(LoseCondition_tE9F1710734DE12BC0FFA41D6F46B4A648614CD14, ___manager_4)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3232[3] = 
 {
 	static_cast<int32_t>(offsetof(MouseHandler_tC30AA138EB5D2336307567D67BCE5971206C40C7, ___ts_4)),static_cast<int32_t>(offsetof(MouseHandler_tC30AA138EB5D2336307567D67BCE5971206C40C7, ___scale_5)),static_cast<int32_t>(offsetof(MouseHandler_tC30AA138EB5D2336307567D67BCE5971206C40C7, ___speed_6)),};
