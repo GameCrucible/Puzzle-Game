@@ -51,10 +51,11 @@ public class CannonFire : MonoBehaviour
     void fireCannon()
     {
         //Code to fire cannon
+        print("spawn");
         GameObject projectile = Instantiate<GameObject>(Projectile); //Spawns cannonball
         projectile.transform.position = new Vector3((transform.position.x + xProjectileOffset),transform.position.y,(transform.position.z + zProjectileOffset));
         this.transform.localScale += animateScale; //Finishes cannon animation
-        Invoke("delayFire", 3); //Calls the delay
+        Invoke("delayFire", 2); //Calls the delay
     }
 
     void delayFire()

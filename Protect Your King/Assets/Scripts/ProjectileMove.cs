@@ -45,16 +45,15 @@ public class ProjectileMove : MonoBehaviour
     void OnCollisionEnter(Collision coll)
     {
         GameObject collided = coll.gameObject; //Finds object collided with
-        if (collided.CompareTag("Enemy")) //Checks if its an enemy
+        print(collided.name);
+        if (collided.CompareTag("Enemy") && !collided.CompareTag("Defense")) //Checks if its an enemy
         {
             //If its an enemy it deals damage and the projectile is deleted
+            print("hit enemy");
+            Destroy(this.gameObject);
             Enemy_Movement enScript = collided.GetComponent<Enemy_Movement>();
             enScript.injured(dmg);
-            Destroy(this.gameObject);
-        }
-        else if(collided.CompareTag("Castle")) {
-            print("a");
-            Destroy(this.gameObject);
+            
         }
     }
 

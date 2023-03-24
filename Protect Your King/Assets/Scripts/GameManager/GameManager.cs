@@ -17,7 +17,8 @@ public class GameManager : MonoBehaviour
     public void enemyDefeated()
     { //Opens victory when all enemies are defeated
         enemyCount--;
-        if(enemyCount <= 0)
+        print("enemy killed");
+        if(enemyCount < 1)
         {
             winUI.SetActive(true);
         }
