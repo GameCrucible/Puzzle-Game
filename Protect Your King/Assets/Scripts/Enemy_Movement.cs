@@ -10,6 +10,7 @@ public class Enemy_Movement : MonoBehaviour
     public bool isStunned = false; //Checks for if the enemy is currently stunned
     public int health; //Gives the Enemy a health bar
     public GameObject manager; //Assign the scene's Game Manager
+    public GameObject explosion;
     public bool isBoss; //Checks if enemy is boss
 
     // Update is called once per frame
@@ -44,7 +45,8 @@ public class Enemy_Movement : MonoBehaviour
     public void injured(int damage)
     {
         health -= damage; //Takes damage based on what projectile hit it
-        if(health < 1) //Only is destroyed when hit points reach 0
+        Instantiate<GameObject>(explosion, transform.position, transform.rotation);
+        if (health < 1) //Only is destroyed when hit points reach 0
         {
             GameManager manage = manager.GetComponent<GameManager>();
             manage.enemyDefeated();
@@ -52,7 +54,7 @@ public class Enemy_Movement : MonoBehaviour
             {
                 manage.bossDefeated();
             }
-
+            
             Destroy(this.gameObject);
         }
     }

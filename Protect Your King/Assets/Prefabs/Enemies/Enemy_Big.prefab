@@ -54,6 +54,8 @@ MonoBehaviour:
   isStunned: 0
   health: 3
   manager: {fileID: 0}
+  explosion: {fileID: 1817147844194262856, guid: f8bd00d7c4b1daf4d83e7f4516168e28, type: 3}
+  isBoss: 0
 --- !u!114 &5010366425369434414
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -67,8 +69,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   manager: {fileID: 0}
-  dirSwitch: 0
-  negSwitch: 0
 --- !u!54 &5010366425369434416
 Rigidbody:
   m_ObjectHideFlags: 0
