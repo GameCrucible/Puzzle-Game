@@ -11,11 +11,14 @@ public class CannonFire : MonoBehaviour
     public bool isProjectile; //Keeps cannon from firing constantly
     public int fireTime; //determines firing time
     public GameObject explosion;
+    public Transform barrel;
 
     //Use 0.75 for offset
     public float xProjectileOffset; //Controls projectile's offset in the x direction
+    public float zProjectileOffset;
 
-    private Vector3 animateScale = new Vector3(0f, 0f, 0.25f); //Quick animation reference
+    private Vector3 animateScale = new Vector3(0f, 50f, 0f); //Quick animation reference
+    private Vector3 animatePos = new Vector3(0f, 0f, 0.5f);
 
     void Start()
     {
@@ -36,7 +39,7 @@ public class CannonFire : MonoBehaviour
                 if (isProjectile == false)
                 {
                     isProjectile = true; //Prevents multiple shots from happening at once
-                    this.transform.localScale -= animateScale; //Starts cannon animation
+                    animateStart(); //Starts cannon animation
                     Invoke("fireCannon", fireTime); //Calls for shot function
                 }
             }
@@ -46,15 +49,29 @@ public class CannonFire : MonoBehaviour
 
     }
 
+    void animateStart()
+    {
+        barrel.transform.localPosition -= animatePos;
+        barrel.transform.localScale -= animateScale;
+    }
+
+    void animateEnd()
+    {
+        barrel.transform.localPosition += animatePos;
+        barrel.transform.localScale += animateScale;
+    }
+
     void fireCannon()
     {
         //Code to fire cannon
         print("spawn");
         GameObject explode = Instantiate<GameObject>(explosion, transform.position, transform.rotation);
-        explode.transform.position = new Vector3((transform.position.x + xProjectileOffset), transform.position.y, (transform.position.z));
+        explode.transform.position = new Vector3((transform.position.x + xProjectileOffset), transform.position.y, (transform.position.z + zProjectileOffset));
         GameObject projectile = Instantiate<GameObject>(Projectile); //Spawns cannonball
-        projectile.transform.position = new Vector3((transform.position.x + xProjectileOffset),transform.position.y,(transform.position.z));
-        this.transform.localScale += animateScale; //Finishes cannon animation
+        projectile.transform.position = new Vector3((transform.position.x + xProjectileOffset),transform.position.y,(transform.position.z + zProjectileOffset));
+
+        animateEnd();
+
         Invoke("delayFire", 2); //Calls the delay
     }
 
