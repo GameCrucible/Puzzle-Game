@@ -8,6 +8,7 @@ public class CannonFire : MonoBehaviour
 
     public GameObject Projectile; //Instatiates the Projectile
     private Vector3 raycastCollision = Vector3.zero; //Creates a raycast so the cannon can find enemies
+    private RaycastHit hit;
     public bool isProjectile; //Keeps cannon from firing constantly
     public int fireTime; //determines firing time
     public GameObject explosion;
@@ -34,7 +35,7 @@ public class CannonFire : MonoBehaviour
         }
         else
         {
-            if (Physics.Raycast(transform.position, detect, 100))
+            if (Physics.Raycast(transform.position, detect, out hit, 100) && hit.transform.tag == "Enemy")
             {
                 if (isProjectile == false)
                 {
